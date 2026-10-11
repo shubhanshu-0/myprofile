@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubhanshu Saraf | Backend Engineer</title>
+  <meta name="description" content="Software Engineer passionate about backend systems, concurrent Go distributed services, high-performance C++ architectures, and network protocols.">
+  
+  <!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shubhanshusaraf.tech/">
+  <meta property="og:title" content="Shubhanshu Saraf | Backend Engineer">
+  <meta property="og:description" content="Software Engineer passionate about backend systems, concurrent Go distributed services, high-performance C++ architectures, and network protocols.">
+  <meta property="og:image" content="https://shubhanshusaraf.tech/me.png">
+  <meta property="og:image:alt" content="Shubhanshu Saraf Profile">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://shubhanshusaraf.tech/">
+  <meta name="twitter:title" content="Shubhanshu Saraf | Backend Engineer">
+  <meta name="twitter:description" content="Software Engineer passionate about backend systems, concurrent Go distributed services, high-performance C++ architectures, and network protocols.">
+  <meta name="twitter:image" content="https://shubhanshusaraf.tech/me.png">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23090b10'/><rect x='4' y='4' width='92' height='92' fill='none' stroke='%2338bdf8' stroke-width='4'/><text x='50%' y='58%' dominant-baseline='central' text-anchor='middle' font-family='monospace' font-size='42' font-weight='800' fill='%237dd3fc'>SS</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+/* =====================================================================
+   SHUBHANSHU SARAF - TECHNICAL PORTFOLIO
+   THEME: ARCTIC ICE-CYAN & TITANIUM WHITE
+   GEOMETRY: STRICT SQUARE HUD / ZERO RADIUS
+   ===================================================================== */
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  
+  --accent: #38bdf8;
+  --accent-secondary: #7dd3fc;
+  --accent-light: rgba(56, 189, 248, 0.08);
+  --accent-glow: rgba(56, 189, 248, 0.22);
+  --accent-contrast: #07090e;
+
+  --bg-canvas: #080a0f;
+  --bg-card: #0e121a;
+  --bg-card-subtle: #131823;
+  --bg-card-elevated: #18202e;
+  --bg-hover: #1c2434;
+  
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --border-accent: rgba(56, 189, 248, 0.38);
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  
+  --color-green: #34d399;
+  --color-green-bg: rgba(52, 211, 153, 0.1);
+
+  --nav-bg: rgba(8, 10, 15, 0.94);
+  --nav-border: rgba(255, 255, 255, 0.12);
+  
+  --transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --radius: 0px !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* TOP NAVBAR */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  padding: 0;
+}
+
+.top-nav-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 12px 28px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-avatar {
+  width: 36px;
+  height: 36px;
+  background: var(--bg-card);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.2px;
+}
+
+.brand-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-social-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  background-color: var(--bg-card);
+  transition: var(--transition);
+}
+
+.nav-social-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background-color: var(--accent-light);
+}
+
+.icon-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+
+.icon-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* MAIN LAYOUT */
+.main-wrapper {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 40px 28px 64px 28px;
+  display: grid;
+  grid-template-columns: 370px 1fr;
+  gap: 28px;
+}
+
+/* LEFT COLUMN */
+.left-column {
+  position: sticky;
+  top: 32px;
+  height: calc(100vh - 54px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.left-column::-webkit-scrollbar {
+  width: 4px;
+}
+.left-column::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+
+/* CARDS */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 22px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+}
+
+.card:hover {
+  border-color: var(--border-accent);
+}
+
+.card-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 8px;
+}
+
+.card-title-tag {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  background-color: var(--accent-light);
+  border: 1px solid var(--border-accent);
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  display: inline-block;
+}
+
+.profile-photo-container {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  background: #060910;
+  border: 1.5px solid var(--border-accent);
+  box-shadow: 0 0 24px var(--accent-glow);
+  margin-bottom: 20px;
+}
+
+.profile-photo-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .profile-photo-large {
+  transform: scale(1.02);
+}
+
+.profile-photo-hud-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+}
+.profile-photo-hud-corner.tl { top: 6px; left: 6px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+.profile-photo-hud-corner.tr { top: 6px; right: 6px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+.profile-photo-hud-corner.bl { bottom: 6px; left: 6px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+.profile-photo-hud-corner.br { bottom: 6px; right: 6px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+
+.hero-name {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 4px;
+  color: var(--text-main);
+}
+
+.hero-headline {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.hero-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+  margin-bottom: 18px;
+}
+
+.hero-desc strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+.contact-item:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--accent);
+  transform: translateX(3px);
+}
+
+.contact-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.contact-item:hover .contact-label {
+  color: var(--text-main);
+}
+
+.copy-mini-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.copy-mini-btn:hover {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.resume-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid var(--border-accent);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 10px;
+  transition: var(--transition);
+  box-shadow: 0 0 14px var(--accent-glow);
+}
+
+.resume-cta-btn:hover {
+  background: var(--accent);
+  color: #050811;
+  box-shadow: 0 0 24px rgba(56, 189, 248, 0.45);
+  transform: translateY(-1px);
+}
+
+.edu-block {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed var(--border);
+}
+.edu-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.edu-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.cert-pill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  border: 1px solid var(--border-accent);
+  padding: 2px 7px;
+  text-transform: uppercase;
+}
+
+.edu-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* RIGHT COLUMN */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tabs-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 4px;
+}
+
+.tab-list {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tab-btn.active {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.tab-btn:hover:not(.active) {
+  background-color: var(--bg-hover);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* IMPACTS GRID IN EXPERIENCE */
+.company-impacts-block {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.metrics-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.metric-card {
+  background-color: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  padding: 16px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.metric-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--border);
+  transition: var(--transition);
+}
+
+.metric-card:hover {
+  border-color: var(--accent);
+  background-color: var(--bg-card-elevated);
+}
+
+.metric-card:hover::before {
+  background: var(--accent);
+}
+
+.metric-card.full-width {
+  grid-column: span 3;
+  background: linear-gradient(90deg, var(--bg-card-subtle) 0%, rgba(56, 189, 248, 0.05) 100%);
+  border-color: var(--border-accent);
+}
+
+.metric-num {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.metric-tit {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.metric-sub {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.skill-group {
+  margin-bottom: 16px;
+}
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.skill-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skill-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  background-color: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.pill:hover {
+  color: var(--text-main);
+  border-color: var(--border-strong);
+}
+
+.pill-core {
+  background-color: var(--accent-light);
+  border-color: var(--border-accent);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.company-container-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 24px;
+  position: relative;
+}
+
+.company-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.company-brand-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.3px;
+}
+
+.company-location {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+}
+
+.career-ladder {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+}
+
+.ladder-step {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ladder-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-subtle);
+}
+
+.ladder-step.current .ladder-dot {
+  background-color: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+.ladder-role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.ladder-step.current .ladder-role {
+  color: var(--accent);
+}
+
+.ladder-arrow {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.project-experience-block {
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px dashed var(--border);
+}
+.project-experience-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.proj-exp-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.proj-exp-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.proj-exp-subtitle {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.role-tag-pill {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  padding: 2px 8px;
+  background-color: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.role-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.role-bullets li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.role-bullets li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 8px;
+  top: 6px;
+}
+
+.role-bullets li strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* PROJECTS SECTION */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.proj-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 22px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.proj-card:hover {
+  border-color: var(--accent);
+  background-color: #0f141f;
+}
+
+.proj-card.featured {
+  border-left: 3px solid var(--accent);
+}
+
+.proj-hud-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-subtle);
+}
+
+.proj-hud-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.proj-hud-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  background-color: var(--accent-light);
+  border: 1px solid var(--border-accent);
+  transition: var(--transition);
+}
+
+.proj-hud-link:hover {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.proj-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  background-color: var(--accent-light);
+  border: 1px solid var(--border-accent);
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.proj-card-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Thumbnail Column with Buttons Below */
+.proj-thumbnail-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proj-thumbnail-box {
+  background: #06080d;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.proj-card:hover .proj-thumbnail-box {
+  border-color: var(--border-accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.proj-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.proj-card:hover .proj-thumbnail-img {
+  transform: scale(1.03);
+}
+
+.proj-thumbnail-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.proj-thumbnail-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.proj-thumbnail-actions .proj-link {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.proj-details-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proj-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.proj-title {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.proj-desc-short {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 6px 12px;
+  background-color: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+.proj-link:hover {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  border-color: var(--accent);
+}
+
+.proj-link.primary {
+  background-color: var(--accent-light);
+  border-color: var(--border-accent);
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border: 1px solid #000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: var(--transition);
+  z-index: 1000;
+}
+.toast.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-footer {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-subtle);
+}
+
+@media (max-width: 1100px) {
+  .proj-card-content {
+    grid-template-columns: 1fr;
+  }
+  .proj-thumbnail-box {
+    height: 160px;
+  }
+}
+
+@media (max-width: 960px) {
+  .main-wrapper {
+    grid-template-columns: 1fr;
+    padding: 20px 18px 48px 18px;
+  }
+  .left-column {
+    position: static;
+    height: auto;
+    overflow-y: visible;
+  }
+  .company-head-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .metrics-list {
+    grid-template-columns: 1fr;
+  }
+  .metric-card.full-width {
+    grid-column: span 1;
+  }
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 6px 8px;
+    font-size: 10.5px;
+  }
+  .site-footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+@media print {
+  body { background: #fff !important; color: #000 !important; }
+  .top-nav, .site-footer, .copy-mini-btn, .icon-btn, .tabs-toolbar, .proj-thumbnail-box, .proj-thumbnail-actions { display: none !important; }
+  .main-wrapper { display: block !important; padding: 0 !important; }
+  .left-column { position: static !important; height: auto !important; }
+  .content-section { display: flex !important; }
+  .card, .company-container-card, .proj-card { border: 1px solid #333 !important; }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Two-Column Container -->
+  <main class="main-wrapper">
+
+    <!-- LEFT COLUMN: Personal Info, Contacts, Education -->
+    <aside class="left-column">
+      
+      <!-- Profile Card (Clean Start, No Robotic Header) -->
+      <section class="card">
+        <!-- Prominent Portrait Photo Box Above Name -->
+        <div class="profile-photo-container">
+          <img src="/me.png" alt="Shubhanshu Saraf" class="profile-photo-large">
+          <div class="profile-photo-hud-corner tl"></div>
+          <div class="profile-photo-hud-corner tr"></div>
+          <div class="profile-photo-hud-corner bl"></div>
+          <div class="profile-photo-hud-corner br"></div>
+        </div>
+
+        <h1 class="hero-name">Shubhanshu Saraf</h1>
+        <div class="hero-tag" style="margin-top: 6px;">
+          <span class="status-dot"></span>
+          <span>SDE II &bull; Bengaluru, India</span>
+        </div>
+        
+        <p class="hero-desc">
+          Software Engineer passionate about backend systems &bull; architecting concurrent Go microservices for distributed simulation pipelines, low-latency in-memory data engines in modern C++, and resilient networking protocols.
+        </p>
+
+        <!-- Direct Contact Links -->
+        <div class="contact-links">
+          <div class="contact-item">
+            <span class="contact-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>shubhanshusaraf0@gmail.com</span>
+            </span>
+            <button class="copy-mini-btn" data-copy="shubhanshusaraf0@gmail.com">Copy</button>
+          </div>
+
+          <a href="https://github.com/shubhanshu-0" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>github.com/shubhanshu-0</span>
+            </span>
+            <span class="copy-mini-btn">↗</span>
+          </a>
+
+          <a href="https://linkedin.com/in/shubhanshu-saraf" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span>linkedin.com/in/shubhanshu-saraf</span>
+            </span>
+            <span class="copy-mini-btn">↗</span>
+          </a>
+
+          <!-- Request Resume Button -->
+          <a href="mailto:shubhanshusaraf0@gmail.com?subject=Resume%20Request%20-%20Shubhanshu%20Saraf&body=Hi%20Shubhanshu%2C%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20resume.%0A%0ACompany%2FTeam%3A%20%0ARole%3A%20%0A%0ABest%20regards%2C" class="resume-cta-btn" id="resume-request-btn" title="Request Resume via Email">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span>REQUEST RESUME</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Education & Certification -->
+      <section class="card">
+        <div class="card-title">
+          <span>EDUCATION &amp; CERTIFICATIONS</span>
+          <span class="card-title-tag">ACADEMIC</span>
+        </div>
+        
+        <div class="edu-block">
+          <div class="edu-head">
+            <span>NIT Raipur</span>
+          </div>
+          <div class="edu-sub">B.Tech &bull; <strong>CPI: 8.11 / 10</strong></div>
+        </div>
+
+        <div class="edu-block">
+          <div class="edu-head">
+            <span>Microservices Architecture</span>
+            <span class="cert-pill">Coursera</span>
+          </div>
+          <div class="edu-sub">Design Patterns & Principles Specialization</div>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- RIGHT COLUMN: Tabbed Sections (Projects, Experience, Skills) -->
+    <section class="right-column">
+
+      <!-- Navigation Tabs Toolbar -->
+      <nav class="tabs-toolbar">
+        <div class="tab-list" role="tablist">
+          <button class="tab-btn active" data-tab="projects" role="tab">Projects</button>
+          <button class="tab-btn" data-tab="experience" role="tab">Experience</button>
+          <button class="tab-btn" data-tab="skills" role="tab">Technical Stack</button>
+        </div>
+      </nav>
+
+      <!-- 1. SECTION: FEATURED PROJECTS -->
+      <section class="content-section" data-section="projects">
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: VeloxKV -->
+          <article class="proj-card featured">
+            <div class="proj-card-content">
+              <!-- Thumbnail Column with Buttons Directly Below -->
+              <div class="proj-thumbnail-col">
+                <a href="https://github.com/shubhanshu-0/velox-kv" target="_blank" rel="noopener noreferrer" class="proj-thumbnail-box" title="View VeloxKV on GitHub">
+                  <img class="proj-thumbnail-img" src="https://opengraph.githubassets.com/1/shubhanshu-0/velox-kv" alt="VeloxKV GitHub Repository Card" loading="lazy">
+                </a>
+
+                <div class="proj-thumbnail-actions">
+                  <a href="https://github.com/shubhanshu-0/velox-kv" target="_blank" rel="noopener noreferrer" class="proj-link primary">
+                    <span>Source Code</span>
+                    <span>↗</span>
+                  </a>
+                  <a href="https://github.com/shubhanshu-0/velox-kv#architecture-overview" target="_blank" rel="noopener noreferrer" class="proj-link">
+                    <span>Docs</span>
+                    <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Details & Bullets -->
+              <div class="proj-details-box">
+                <div class="proj-head">
+                  <div>
+                    <h3 class="proj-title">VeloxKV &bull; Non-Blocking In-Memory Key-Value Store</h3>
+                    <p class="proj-desc-short">High-performance, single-threaded, non-blocking key-value cache server in Modern C++17 with LRU eviction and threadless TTL.</p>
+                  </div>
+                </div>
+
+                <div class="role-tags">
+                  <span class="role-tag-pill">Modern C++17</span>
+                  <span class="role-tag-pill">POSIX poll()</span>
+                  <span class="role-tag-pill">Non-Blocking I/O</span>
+                  <span class="role-tag-pill">Lock-Free LRU Engine</span>
+                  <span class="role-tag-pill">Threadless TTL</span>
+                </div>
+
+                <ul class="role-bullets">
+                  <li>
+                    <strong>Asynchronous Non-Blocking I/O:</strong> Built on POSIX <code>poll()</code> event multiplexing on non-blocking sockets (<code>O_NONBLOCK</code>), handling thousands of concurrent client connections on a single OS thread with zero lock contention.
+                  </li>
+                  <li>
+                    <strong>Lock-Free Cache Engine:</strong> Engineered an integrated LRU eviction cache combining <code>std::unordered_map</code> for O(1) hash lookups with a sentinel doubly-linked list for O(1) recency updates and zero virtual call indirection.
+                  </li>
+                  <li>
+                    <strong>Threadless TTL Expiration:</strong> Designed a dual-mode expiration manager combining passive checks upon read access with active stochastic non-blocking sampling, eliminating background thread overhead.
+                  </li>
+                  <li>
+                    <strong>Custom Text Protocol:</strong> Implemented a line-buffered streaming parser supporting <code>SET</code>, <code>GET</code>, <code>DEL</code>, <code>STATS</code> (hits, misses, hit-rate, evictions), and <code>INFO</code> commands.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Room Chat (chat-room) -->
+          <article class="proj-card">
+            <div class="proj-card-content">
+              <!-- Thumbnail Column with Button Directly Below -->
+              <div class="proj-thumbnail-col">
+                <a href="https://github.com/shubhanshu-0/chat-room" target="_blank" rel="noopener noreferrer" class="proj-thumbnail-box" title="View Room Chat on GitHub">
+                  <img class="proj-thumbnail-img" src="https://opengraph.githubassets.com/1/shubhanshu-0/chat-room" alt="Room Chat GitHub Repository Card" loading="lazy">
+                </a>
+
+                <div class="proj-thumbnail-actions">
+                  <a href="https://github.com/shubhanshu-0/chat-room" target="_blank" rel="noopener noreferrer" class="proj-link primary">
+                    <span>Source Code</span>
+                    <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Details & Bullets -->
+              <div class="proj-details-box">
+                <div class="proj-head">
+                  <div>
+                    <h3 class="proj-title">Room Chat &bull; Real-Time Chat Platform</h3>
+                    <p class="proj-desc-short">Real-time messaging platform enabling instant creation of isolated, passcode-protected chat rooms with persistent histories.</p>
+                  </div>
+                </div>
+
+                <div class="role-tags">
+                  <span class="role-tag-pill">TypeScript</span>
+                  <span class="role-tag-pill">Node.js</span>
+                  <span class="role-tag-pill">Socket.IO</span>
+                  <span class="role-tag-pill">PostgreSQL</span>
+                  <span class="role-tag-pill">Prisma ORM</span>
+                  <span class="role-tag-pill">Docker</span>
+                </div>
+
+                <ul class="role-bullets">
+                  <li>
+                    <strong>WebSocket Broadcasting:</strong> Engineered an event-driven chat system with Socket.IO delivering sub-millisecond broadcast latency across dynamically joined rooms.
+                  </li>
+                  <li>
+                    <strong>Passcode Protection &amp; Room Security:</strong> Created fine-grained room lifecycles and hashed passcode validation enforcing private, segregated communication.
+                  </li>
+                  <li>
+                    <strong>Presence &amp; Persistent State:</strong> Implemented real-time typing indicators, user presence tracking, and relational chat history using PostgreSQL and Prisma ORM.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 2. SECTION: PROFESSIONAL EXPERIENCE (WITH INTEGRATED IMPACTS & CAREER LADDER) -->
+      <section class="content-section" data-section="experience" style="display: none;">
+        <div class="company-container-card">
+          
+          <!-- Company & Promotion Transition Header -->
+          <div class="company-head-row">
+            <div class="company-brand-meta">
+              <h2 class="company-name">Wobot.ai</h2>
+              <span class="company-location">Remote, India</span>
+            </div>
+
+            <!-- Promotion transition right-side badge ladder -->
+            <div class="career-ladder" title="Career Progression at Wobot.ai">
+              <div class="ladder-step current">
+                <span class="ladder-dot"></span>
+                <span class="ladder-role">SDE II</span>
+              </div>
+              <span class="ladder-arrow">&larr;</span>
+              <div class="ladder-step">
+                <span class="ladder-dot"></span>
+                <span class="ladder-role">SDE I</span>
+              </div>
+              <span class="ladder-arrow">&larr;</span>
+              <div class="ladder-step">
+                <span class="ladder-dot"></span>
+                <span class="ladder-role">Intern</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- INTEGRATED IMPACTS BLOCK (Positioned directly under company header) -->
+          <div class="company-impacts-block">
+            <div class="card-title" style="margin-bottom: 12px;">
+              <span>KEY IMPACTS</span>
+              <span class="card-title-tag">SCALE &amp; EFFICIENCY</span>
+            </div>
+            
+            <div class="metrics-list">
+              <div class="metric-card full-width">
+                <div class="metric-num">4,500+</div>
+                <div class="metric-tit">Daily Live Cloud Cameras Handled</div>
+                <div class="metric-sub">Wobot.ai Mint Platform: single-source pipeline architecture with dedicated C++ source plugins</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-num">-25%</div>
+                <div class="metric-tit">Peak RAM Spikes Cut</div>
+                <div class="metric-sub">Reduced memory footprint per source plugin across all camera pipelines</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-num">0%</div>
+                <div class="metric-tit">Frame Corruption</div>
+                <div class="metric-sub">Down from ~20% via TCP RTSP &amp; stall detection</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-num">30x</div>
+                <div class="metric-tit">Simulation Acceleration</div>
+                <div class="metric-sub">1-hour offline workload finished in 2 minutes</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 1: Simulation & Orchestration Service / Mint Debugger -->
+          <article class="project-experience-block">
+            <div class="proj-exp-head">
+              <div>
+                <h3 class="proj-exp-title">Simulation &amp; Orchestration Service / Mint Debugger</h3>
+                <div class="proj-exp-subtitle">Go, gRPC, PostgreSQL, AWS S3, Docker, C++</div>
+              </div>
+            </div>
+
+            <div class="role-tags">
+              <span class="role-tag-pill">Go</span>
+              <span class="role-tag-pill">gRPC</span>
+              <span class="role-tag-pill">Worker Pools</span>
+              <span class="role-tag-pill">PostgreSQL</span>
+              <span class="role-tag-pill">AWS S3</span>
+              <span class="role-tag-pill">Docker</span>
+            </div>
+
+            <ul class="role-bullets">
+              <li>
+                <strong>Distributed Backend &amp; gRPC Orchestration:</strong> Developed a distributed backend service in Go, exposing gRPC APIs to initiate, schedule, and orchestrate asynchronous TS segment capture and offline simulation tasks across nodes.
+              </li>
+              <li>
+                <strong>Worker Pool &amp; Backpressure:</strong> Built a rate-limited goroutine worker pool and job dispatcher with backpressure management to handle concurrent API requests and prevent downstream service degradation during peak workloads.
+              </li>
+              <li>
+                <strong>Pipelines &amp; Artifact Tracking:</strong> Architected reliable data pipelines and artifact management using PostgreSQL for real-time job state tracking (Pending, Failed, Finished) and AWS S3 for test video dumps, templates, and downloadable results retrievable by job ID.
+              </li>
+              <li>
+                <strong>30x Acceleration on Simulations:</strong> Accelerated pipeline evaluation workflows by <strong>30x</strong> (completing 1-hour heavy workloads in 2 minutes) by orchestrating simulation runs and monitoring execution lifecycles via an asynchronous Job-Session Watcher.
+              </li>
+            </ul>
+          </article>
+
+          <!-- PROJECT 2: Mint Video Intelligence Platform -->
+          <article class="project-experience-block">
+            <div class="proj-exp-head">
+              <div>
+                <h3 class="proj-exp-title">Mint Video Intelligence Platform</h3>
+                <div class="proj-exp-subtitle">C++, FFmpeg libav, GStreamer, Multithreading, Linux</div>
+              </div>
+            </div>
+
+            <div class="role-tags">
+              <span class="role-tag-pill">C++</span>
+              <span class="role-tag-pill">FFmpeg (libav)</span>
+              <span class="role-tag-pill">GStreamer</span>
+              <span class="role-tag-pill">Valgrind</span>
+              <span class="role-tag-pill">Heaptrack</span>
+              <span class="role-tag-pill">Linux</span>
+            </div>
+
+            <ul class="role-bullets">
+              <li>
+                <strong>Core RTSP Stream Ingestion at Scale:</strong> Re-engineered the core stream ingestion and decoding plugin using FFmpeg libav for Mint's single-source pipeline architecture, serving <strong>4,500+ daily cameras on cloud</strong> with dedicated, isolated source plugin instances.
+              </li>
+              <li>
+                <strong>Eliminated Stream Drops &amp; Network Jitter:</strong> Enforced RTSP stream ingestion over TCP transport with custom TCP stall detection, adaptive non-blocking buffering, and exponential backoff reconnects; eliminated packet jitter and dropped streams, reducing frame corruption from <strong>~20% to 0%</strong>.
+              </li>
+              <li>
+                <strong>Collective Cloud Resource Savings:</strong> Slashed peak memory spikes by <strong>~25% per source plugin</strong>; across the active cloud camera fleet, this collective reduction stabilized long-term host memory footprints and lowered overall cluster compute load.
+              </li>
+              <li>
+                <strong>Unified Polymorphic OOP Pipeline:</strong> Engineered a unified, single-plugin pipeline built on OOP design principles, utilizing dynamic polymorphic C++ modules and a custom JSON-based command parser with zero redundant buffer overhead.
+              </li>
+              <li>
+                <strong>Runtime Memory Leak Resolution &amp; RAII:</strong> Profiled and resolved system bottlenecks, heap fragmentation, and memory leaks using Valgrind, Heaptrack, and GDB; engineered clean object lifecycles and strict RAII principles to ensure 24/7 long-term memory stability.
+              </li>
+              <li>
+                <strong>Selective Privacy Redaction:</strong> Designed an extensible visual redaction pipeline in C++ to obscure sensitive features in compliance with international privacy standards (GDPR), while strictly preserving downstream analytics metadata and codec bounding boxes.
+              </li>
+              <li>
+                <strong>Real-Time Event Processing &amp; Metadata Bus:</strong> Delivered high-throughput event processing and spatial change detection in native C++, architecting an in-memory metadata bus and optimizing frame pipelines for zero unnecessary allocation.
+              </li>
+              <li>
+                <strong>Native C++ Component Migration:</strong> Migrated compute-intensive data preprocessing components from Python to native C++, significantly boosting ingestion throughput and reducing CPU utilization.
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 3. SECTION: TECHNICAL SKILLS -->
+      <section class="content-section" data-section="skills" style="display: none;">
+        <div class="card">
+          <div class="card-title">
+            <span>TECHNICAL EXPERTISE</span>
+            <span class="card-title-tag">CORE</span>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Languages</div>
+            <div class="skill-tags">
+              <span class="pill pill-core">Go (Golang)</span>
+              <span class="pill pill-core">C++ (Modern C++17)</span>
+              <span class="pill">Python</span>
+              <span class="pill">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Frameworks &amp; Libraries</div>
+            <div class="skill-tags">
+              <span class="pill pill-core">Gin</span>
+              <span class="pill pill-core">FFmpeg (libav)</span>
+              <span class="pill pill-core">GStreamer</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Databases &amp; Storage</div>
+            <div class="skill-tags">
+              <span class="pill pill-core">PostgreSQL</span>
+              <span class="pill pill-core">AWS S3</span>
+              <span class="pill">Redis</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Observability &amp; Profiling</div>
+            <div class="skill-tags">
+              <span class="pill">Valgrind</span>
+              <span class="pill">Heaptrack</span>
+              <span class="pill">GDB</span>
+              <span class="pill">Prometheus</span>
+              <span class="pill">Grafana</span>
+              <span class="pill">Loki</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Backend Systems</div>
+            <div class="skill-tags">
+              <span class="pill">Concurrency &amp; Worker Pools</span>
+              <span class="pill">Distributed Systems</span>
+              <span class="pill">Multithreading</span>
+              <span class="pill">gRPC &amp; Protobuf</span>
+              <span class="pill">REST APIs</span>
+              <span class="pill">Microservices Architecture</span>
+              <span class="pill">Memory Management (RAII)</span>
+              <span class="pill">Docker</span>
+              <span class="pill">Linux Internals</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">COPIED TO CLIPBOARD</div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <span>SHUBHANSHU SARAF &bull; SOFTWARE ENGINEER</span>
+    <span>BENGALURU, INDIA</span>
+  </footer>
+
+  <script>
+/**
+ * Portfolio Interactive HUD Scripts
+ * Handles section tabs filtering, copy to clipboard, and print.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const toast = document.getElementById('toast');
+
+  // 1. Tab Navigation
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const contentSections = document.querySelectorAll('.content-section');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const targetTab = btn.getAttribute('data-tab');
+
+      contentSections.forEach(section => {
+        const sectionType = section.getAttribute('data-section');
+        if (sectionType === targetTab) {
+          section.style.display = 'flex';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 2. Copy to Clipboard
+  document.querySelectorAll('[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const textToCopy = btn.getAttribute('data-copy');
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(textToCopy);
+        } else {
+          const input = document.createElement('input');
+          input.value = textToCopy;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          document.body.removeChild(input);
+        }
+        btn.textContent = 'COPIED!';
+        showToast(`COPIED: ${textToCopy}`);
+        setTimeout(() => { btn.textContent = 'COPY'; }, 2000);
+      } catch (err) {
+        showToast('FAILED TO COPY');
+      }
+    });
+  });
+
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('active');
+    setTimeout(() => { toast.classList.remove('active'); }, 2200);
+  }
+
+  // 3. Resume Request Notification
+  const resumeBtn = document.getElementById('resume-request-btn');
+  if (resumeBtn) {
+    resumeBtn.addEventListener('click', () => {
+      showToast('Opening email to request resume...');
+    });
+  }
+});
+  </script>
+</body>
+</html>

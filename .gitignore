@@ -1,0 +1,32 @@
+# Compiled binaries & executables
+server
+*.exe
+*.out
+
+# Operating system & editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.local
+*.env
+
+# LaTeX build artifacts (if compiled locally)
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Vercel deployment folder
+.vercel/
+
+resume.tex
